@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
 import logo from './logo.svg';
+import { initGrpc } from './services/client';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    initGrpc();
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
